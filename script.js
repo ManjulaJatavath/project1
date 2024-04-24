@@ -47,8 +47,11 @@ document.addEventListener('DOMContentLoaded', function () {
             currentMenuItemIndex++;
             if (currentMenuItemIndex >= menuItems.length) {
                 currentMenuItemIndex = 0;
+                // Automatically scroll back to the first menu item
+                menuItems[currentMenuItemIndex].scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                menuItems[currentMenuItemIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
-            menuItems[currentMenuItemIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     }
 
