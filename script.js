@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuIcon = document.querySelector('.menu-icon');
     const menu = document.querySelector('.menu');
     const sections = document.querySelectorAll('section');
-    const photos = document.querySelectorAll('.photo');
+    const photos = document.querySelectorAll('.photo'); // Assuming your photos have a class 'photo'
     let currentPhotoIndex = 0;
-    
+
     smoothScrollLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     menuIcon.addEventListener('click', function () {
         menu.classList.toggle('show');
     });
+
     const contactLink = document.querySelector('a[href="#contact"]');
     if (contactLink) {
         contactLink.addEventListener('click', function (e) {
@@ -62,14 +63,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to handle continuous scrolling through photos
     function handleScroll() {
-        const threshold = window.innerHeight * 0.5; 
+        const threshold = window.innerHeight * 0.5; // Adjust this value as needed
         const lastPhoto = photos[photos.length - 1];
         
         if (lastPhoto.getBoundingClientRect().top <= threshold) {
             // Show next photo
             currentPhotoIndex++;
             if (currentPhotoIndex >= photos.length) {
-                currentPhotoIndex = 0;
+                currentPhotoIndex = 0; // Restart from the first photo
             }
             photos[currentPhotoIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
