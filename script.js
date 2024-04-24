@@ -3,9 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuIcon = document.querySelector('.menu-icon');
     const menu = document.querySelector('.menu');
     const sections = document.querySelectorAll('section');
-    const photos = document.querySelectorAll('.photo'); // Assuming your photos have a class 'photo'
-    let currentPhotoIndex = 0;
-
+    const photos = document.querySelectorAll('.photo');
+    const menuItems = document.querySelectorAll('.item'); // Select all menu items
+    let currentMenuItemIndex = 0;
+    
     smoothScrollLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -35,47 +36,22 @@ document.addEventListener('DOMContentLoaded', function () {
     menuIcon.addEventListener('click', function () {
         menu.classList.toggle('show');
     });
-
-    const contactLink = document.querySelector('a[href="#contact"]');
-    if (contactLink) {
-        contactLink.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-                sections.forEach(section => {
-                    if (section.id === targetId) {
-                        section.classList.add('active');
-                    } else {
-                        section.classList.remove('active');
-                    }
-                });
-            }
-        });
-    }
-
-    // Function to handle continuous scrolling through photos
+    
+    // Function to handle continuous scrolling through menu items
     function handleScroll() {
-        const threshold = window.innerHeight * 0.5; // Adjust this value as needed
-        const lastPhoto = photos[photos.length - 1];
+        const threshold = window.innerHeight * 0.5; 
+        const lastMenuItem = menuItems[menuItems.length - 1];
         
-        if (lastPhoto.getBoundingClientRect().top <= threshold) {
-            // Show next photo
-            currentPhotoIndex++;
-            if (currentPhotoIndex >= photos.length) {
-                currentPhotoIndex = 0; // Restart from the first photo
+        if (lastMenuItem.getBoundingClientRect().top <= threshold) {
+            // Show next menu item
+            currentMenuItemIndex++;
+            if (currentMenuItemIndex >= menuItems.length) {
+                currentMenuItemIndex = 0;
             }
-            photos[currentPhotoIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            menuItems[currentMenuItemIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     }
 
-    // Add scroll event listener to trigger continuous photo scrolling
+    // Add scroll event listener to trigger continuous menu item scrolling
     window.addEventListener('scroll', handleScroll);
 });
