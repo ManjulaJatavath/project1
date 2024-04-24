@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuIcon = document.querySelector('.menu-icon');
     const menu = document.querySelector('.menu');
     const sections = document.querySelectorAll('section');
-
+    const photos = document.querySelectorAll('.photo');
+    let currentPhotoIndex = 0;
+    
+    
     smoothScrollLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -57,4 +60,22 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+});
+    // Function to handle continuous scrolling through photos
+    function handleScroll() {
+        const threshold = window.innerHeight * 0.5; 
+        const lastPhoto = photos[photos.length - 1];
+        
+        if (lastPhoto.getBoundingClientRect().top <= threshold) {
+            // Show next photo
+            currentPhotoIndex++;
+            if (currentPhotoIndex >= photos.length) {
+                currentPhotoIndex = 0;
+            }
+            photos[currentPhotoIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    // Add scroll event listener to trigger continuous photo scrolling
+    window.addEventListener('scroll', handleScroll);
 });
