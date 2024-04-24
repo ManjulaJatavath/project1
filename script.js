@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const photos = document.querySelectorAll('.photo');
     let currentPhotoIndex = 0;
     
-    
     smoothScrollLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -60,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-});
+
     // Function to handle continuous scrolling through photos
     function handleScroll() {
         const threshold = window.innerHeight * 0.5; 
