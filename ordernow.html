@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Now - MR Restaurant</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa; /* Light Gray */
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    .navbar {
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+  
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        margin-top: -80px;
+      }
+  
+      .logo img {
+        height: 50px;
+      }
+  
+      .menu {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+  
+      .menu li {
+        margin: 0 20px;
+      }
+  
+      .menu a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+  
+      .menu a:hover {
+        color: #FF5733;
+      }
+    .order-container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      margin-top: 100px;
+    }
+    .order-container h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #343a40;
+      text-align: center;
+    }
+    .order-container label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .order-container input, .order-container select, .order-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .order-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #dc3545; /* Red */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .order-container button:hover {
+      background-color: #c82333; 
+    }
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+          <div class="logo">
+            <img src="images/vh6zdlfq.png" alt="MR Restaurant logo">
+          </div>
+          <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="reservation.html">Reservation Page</a></li>
+          </ul>
+        </div>
+      </div>
+  <div class="order-container">
+    <h2>Order Now</h2>
+    <form action="/submit_order" method="POST">
+      <!-- Contact Information -->
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone</label>
+      <input type="text" id="phone" name="phone" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="address">Delivery Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <!-- Order Details -->
+      <label for="items">Select Items</label>
+      <select id="items" name="items[]" multiple required>
+        <option value="Signature Dish 1">Signature Dish 1</option>
+        <option value="Signature Dish 2">Signature Dish 2</option>
+        <option value="Signature Dish 3">Signature Dish 3</option>
+        <option value="Signature Dish 4">Signature Dish 4</option>
+        <option value="Signature Dish 5">Signature Dish 5</option>
+      </select>
+
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" name="quantity" min="1" required>
+
+      <!-- Delivery or Pickup -->
+      <label for="delivery">Delivery or Pickup</label>
+      <select id="delivery" name="delivery" required>
+        <option value="delivery">Delivery</option>
+        <option value="pickup">Pickup</option>
+      </select>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -9,19 +9,21 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
+  <nav class="navbar" style="background-color: #ee6262;">
+    <div class="nav-container">
       <div class="logo">
-        <img src="images/vh6zdlfq.png" alt="MR Restaurant logo" style="height: 120px;">
+        <img src="images/vh6zdlfq.png" alt="MR Restaurant logo" style="height: 120px; background-color: aqua;">
       </div>
       <ul class="menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#specials">Specials</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#menu">Menu</a></li>
+        <li><a href="#features">Offers</a></li>
+        <li><a href="#menu"> Our Menu</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="ordernow.html">Order Now</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
       </ul>
       <div class="menu-icon">
         <i class="fas fa-bars"></i>
@@ -30,14 +32,17 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="Home">
-    <div class="container">
+  <section id="home" class="Home" style="background-color: aquamarine;">
+    <div class="hero-container">
       <div class="hero">
         <div class="hero_content">
-          <div class="tag">Discover Exquisite Flavors</div>
+          <div class="tag">
+            <span class="gradient">MR.</span> RESTAURANT
+          </div>
+          <h2 style="color: #b60404;">Discover Exquisite Flavors</h2>
           <h1>Indulge in Culinary Excellence</h1>
           <p>Welcome to a world of delightful flavors and impeccable service. Explore our menu and experience culinary artistry like never before.</p>
-          <button class="explore_btn">Explore Now</button>
+          <a href="#menu" class="explore_btn" style="text-decoration: none;">Explore Now</a>
         </div>
         <img src="images/hero_image.png" alt="Hero Image">
       </div>
@@ -47,24 +52,28 @@
   <!-- About Section -->
   <section id="about" class="about">
     <div class="about_container container">
-      <h2>About</h2>
+      <h3 style="color: white;"> A few Words</h3>
+      <h2>ABOUT US</h2>
+      <p style="color: white;font-size: 18px;">We're passionate about our food</p>
       <p>MR Restaurant is dedicated to providing our customers with exceptional dining experiences. Our chefs craft each dish with precision and passion, ensuring every bite is a delight.</p>
       <p>We pride ourselves on sourcing the freshest ingredients and offering a diverse menu to cater to every palate. Whether you're craving comfort classics or exploring adventurous flavors, we have something for everyone.</p>
     </div>
   </section>
 
   <!-- Specials Section -->
-  <section id="specials" class="specials">
+  <section id="specials" class="section specials">
     <div class="specials_container container">
-      <h2>Specials</h2>
+      <h2>SPECIALS</h2>
       <div class="specials_grid">
         <div class="special_item">
-          <img src="icons/special offer 1.jpeg" alt="Special Offer 1">
+          <img style="width: 100%;
+          height: 300px;"   src="icons/pg.jpg" alt="Special Offer 1">
           <h3>Weekend Brunch</h3>
           <p>Join us for our indulgent weekend brunch buffet featuring an array of savory and sweet delights.</p>
         </div>
         <div class="special_item">
-          <img src="icons/special offer 2.jpeg" alt="Special Offer 2">
+          <img  style="width: 100%;
+          height: 300px"; src="icons/happy.jpg" alt="Special Offer 2">
           <h3>Happy Hour</h3>
           <p>Unwind after a long day with our happy hour specials on select drinks and appetizers.</p>
         </div>
@@ -73,9 +82,9 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section id="testimonials">
+  <section id="testimonials" class="section">
     <div class="testimonials_container container">
-      <h2>What Our Customers Say</h2>
+      <h2 style="text-align: center;">What Our Customers Say</h2>
       <div class="testimonial">
         <div class="testimonial_content">
           <p>"Amazing food and excellent service! Best dining experience I've had in a long time."</p>
@@ -92,16 +101,23 @@
   </section>
 
   <!-- Features Section -->
-  <section id="features" class="features">
+  <div class="features">
+    <h2 style="    position: relative;
+    text-align: center;
+    padding-top: 100px;
+    margin-top: -40px;
+    margin-bottom: -700px;font-family: monospace;; font-size: 36px;">OFFERS</h2>
+  </div>
+  <section id="features" class="features features-section">
     <div class="feature">
-      <img src="icons/exclusive offer.png" alt="">
+      <img src="icons/img.jpg" alt="">
       <div class="feature_content">
         <h3>Exclusive Offers</h3>
         <p>Enjoy special discounts and offers on your favorite dishes.</p>
       </div>
     </div>
     <div class="feature">
-      <img src="icons/fresh-vegetables.png" alt="">
+      <img src="icons/fresh.jpg" alt="">
       <div class="feature_content">
         <h3>Fresh Ingredients</h3>
         <p>We use only the freshest ingredients to create mouthwatering dishes.</p>
@@ -110,16 +126,32 @@
     <div class="feature">
       <img src="icons/Free Home Delivery.png" alt="">
       <div class="feature_content">
-        <h3>Fast Home Delivery</h3>
+        <h3>Free Home Delivery</h3>
+        <p>Experience prompt and efficient delivery services for your convenience.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <img src="icons/variety.png" alt="">
+      <div class="feature_content">
+        <h3>Variety of
+          Dishes</h3>
+        <p>Experience prompt and efficient delivery services for your convenience.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <img src="icons/mintes.jpg" alt="">
+      <div class="feature_content">
+        <h3>Thirty Minutes
+          Delivery</h3>
         <p>Experience prompt and efficient delivery services for your convenience.</p>
       </div>
     </div>
   </section>
 
   <!-- Menu Section -->
-  <section id="menu" class="menu">
-    <div class="tag">Our Menu</div>
-    <h2>Explore Our Menu</h2>
+  <section id="menu" class="menu-section menu_section">
+    <div class="tag">Explore Our Menu</div>
+    <!-- <h2>Explore Our Menu</h2> -->
     <div class="grid">
       <div class="item">
         <img class="grid-image" src="images/grid_image1.png" alt="Signature Dish 1">
@@ -166,8 +198,8 @@
     </div>
   </section>
   <!-- Contact Us Section -->
-<section id="contact" class="contact">
-  <div class="container">
+<section id="contact" class="contact contact-section">
+  <div class="contact-container">
       <h2>Contact</h2>
       <p>Have a question or feedback? Reach out to us!</p><br>
 
@@ -194,16 +226,15 @@
       <div class="link_lists">
         <h3>Main Links</h3>
         <ul>
-          <li><a href="#">Order Now</a></li>
+          <li><a href="ordernow.html">Order Now</a></li>
           <li><a href="#">Reservations</a></li>
-          <li><a href="contact_us.html">Contact Us</a></li>
           <li><a href="#">Latest News</a></li>
         </ul>
       </div>
       <div class="link_lists">
         <h3>Support</h3>
         <ul>
-          <li><a href="#">About Us</a></li>
+          <li><a href="#about">About Us</a></li>
           <li><a href="#">Privacy Policy</a></li>
           <li><a href="#">Terms & Conditions</a></li>
         </ul>
