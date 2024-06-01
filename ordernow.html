@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Order Now - MR Restaurant</title>
-  <link rel="stylesheet" href="styles.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,9 +12,8 @@
       padding: 0;
       box-sizing: border-box;
     }
-  
     .navbar {
-        background-color: #fff;
+        background-color: rgb(76 33 89);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         padding: 10px 0;
         position: fixed;
@@ -30,6 +28,13 @@
         padding: 20px;
         margin-top: -80px;
       }
+      .nav-container {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 200px;
+      }
   
       .logo img {
         height: 50px;
@@ -40,6 +45,7 @@
         padding: 0;
         display: flex;
         justify-content: center;
+        margin-bottom: 0px;
       }
   
       .menu li {
@@ -48,7 +54,7 @@
   
       .menu a {
         text-decoration: none;
-        color: #333;
+        color: white;
         font-weight: bold;
         transition: color 0.3s ease;
       }
@@ -130,11 +136,20 @@
       <!-- Order Details -->
       <label for="items">Select Items</label>
       <select id="items" name="items[]" multiple required>
-        <option value="Signature Dish 1">Signature Dish 1</option>
-        <option value="Signature Dish 2">Signature Dish 2</option>
-        <option value="Signature Dish 3">Signature Dish 3</option>
-        <option value="Signature Dish 4">Signature Dish 4</option>
-        <option value="Signature Dish 5">Signature Dish 5</option>
+        <option value="Signature Dish 1"> Dish 1</option>
+        <option value="Signature Dish 2"> Dish 2</option>
+        <option value="Signature Dish 3"> Dish 3</option>
+        <option value="Signature Dish 4"> Dish 4</option>
+        <option value="Signature Dish 5"> Dish 5</option>
+        <option value="Signature Dish 5"> Dish 6</option>
+        <option value="Signature Dish 5"> Dish 7</option>
+        <option value="Signature Dish 5"> Dish 8</option>
+        <option value="Signature Dish 5"> Dish 9</option>
+        <option value="Signature Dish 5"> Dish 10</option>
+        <option value="Signature Dish 5"> Dish 11</option>
+        <option value="Signature Dish 5"> Dish 12</option>
+        <option value="Signature Dish 5"> Dish 13</option>
+        <option value="Signature Dish 5"> Dish 14</option>
       </select>
 
       <label for="quantity">Quantity</label>

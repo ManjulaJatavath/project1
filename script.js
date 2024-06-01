@@ -59,3 +59,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+function toggleReadMore(button) {
+    const card = button.closest('.card');
+    const paragraph = card.querySelector('.content p');
+    if (paragraph.classList.contains('hidden')) {
+        paragraph.classList.remove('hidden');
+        button.textContent = 'Read Less';
+    } else {
+        paragraph.classList.add('hidden');
+        button.textContent = 'Read More';
+    }
+}

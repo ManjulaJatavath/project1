@@ -1,11 +1,4 @@
-@keyframes scrollImages {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-100% * 14)); 
-  }
-}
+
 
 
 /* Global Styles */
@@ -127,6 +120,9 @@ div.logo {
 }
 
 @media only screen and (max-width: 768px) {
+  body{
+    padding: 0px 10px 10px 40px;
+  }
   .nav-container {
     display: flex;
     justify-content: space-between;
@@ -292,7 +288,7 @@ div.logo {
   text-align: center;
   margin: 50px auto;
   max-width: 800px;
-  margin-top: 140px;
+  margin-top: 100px;
 }
 
 .about h2 {
@@ -312,25 +308,7 @@ div.logo {
 }
 
 /* Menu Section */
-#menu{
-  margin-top: 30px;
-}
-.menu-section{
-  margin-top: 30px;
-  text-align: center;
-}
-.menu-section{
-  padding-top: 150px;
-}
-.menu.show {
-  display: block;
-}
-.menu_container {
-  overflow-x: auto;
-  white-space: nowrap;
-  margin-bottom: 20px;
-  margin-top: 140px;
-}
+
 .grid {
   display: inline-flex;
 }
@@ -347,6 +325,122 @@ div.logo {
   flex: 0 0 auto;
   margin-right: 10px;
 }
+#menu {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: center; /* Center the cards horizontally */
+}
+
+.menu-section {
+  text-align: center;
+}
+.menu-section h1 {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 36px;
+    margin-bottom: 5px;
+    color: #6d1081;
+    font-family: monospace;
+}
+.menu-section {
+  padding-top: 110px; /* Adjust padding as needed */
+  height: 100%;
+}
+
+.menu.show {
+  display: block;
+}
+
+.menu_container {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  margin-top: 140px;
+}
+
+.card {
+  background-color: white;
+  width: 294px;
+  padding: 0 0 24px 0;
+  border-radius: 7px;
+  margin: 10px; /* Add more margin for spacing between cards */
+}
+
+.image {
+  padding: 5px;
+}
+
+.image img {
+  border-radius: 7px;    
+  height: 200px;       
+}
+
+.capsule {
+  padding: 0 28px 0 14px;
+}
+
+.capsule span {
+  border: 1px solid gray;
+  padding: 1px 6px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-family: 'Poppins';
+}
+
+.content p {
+  font-size: 14px;
+  color: gray;
+}
+
+.content {
+  padding: 7px 13px;
+  font-family: 'Poppins', 'sans-serif';
+}
+
+.button {
+  text-align: center;
+}
+
+.button button {
+  padding: 7px 9px;
+  border-radius: 15px;
+  background-color: rgb(216, 235, 257);
+  color: rgb(14, 150, 234);
+  font-size: 10px;
+  margin-top: 7px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button a:hover {
+  background-color: #73b7e2;
+  color: #092c47;
+}
+.hidden {
+  display: none;
+}
+
+.content:target .hidden {
+  display: block;
+}
+
+.button button:hover {
+  background-color: #73b7e2;
+  color: #092c47;
+}
+.button a {
+  display: inline-block;
+  padding: 7px 9px;
+  border-radius: 15px;
+  background-color: rgb(216, 235, 257);
+  color: rgb(14, 150, 234);
+  font-size: 10px;
+  margin-top: 7px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 
 /* Specials Section */
 .specials_container {
