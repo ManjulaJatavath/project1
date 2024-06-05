@@ -121,7 +121,7 @@ div.logo {
 
 @media only screen and (max-width: 768px) {
   body{
-    padding: 0px 10px 10px 40px;
+    padding: 0px
   }
   .nav-container {
     display: flex;
@@ -139,7 +139,7 @@ div.logo {
 .navbar {
   padding: 10px 20px;
   position: fixed;
-  width: 25%;
+  width: 45%;
   top: -0px;
 }
   .menu {
@@ -148,17 +148,22 @@ div.logo {
     align-items: flex-end;
     position: absolute;
     top: 100%;
-    right: 0;
+    right: 30px;
     background-color: #dc3545;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 2px;
+    left: 180px;
+    margin-top: -90px;
   }
 
   .menu li {
     display: block;
-    margin: 10px 0;
+    margin: 5px 0;
   }
-
+.menu a{
+  font-size: 11px;
+  display: grid;
+}
   .menu-icon {
     display: block;
     cursor: pointer;
@@ -168,6 +173,7 @@ div.logo {
    }
    .hero {
     margin-bottom: -50px;
+    display: grid !important;
    }
    .hero h1 {
     font-size: 20px !important;
@@ -220,6 +226,27 @@ div.logo {
 }
 .specials_container{
   margin-bottom: 90px !important;
+}
+.hero img{
+  max-width: 80% !important;
+  margin-top: 50px !important;
+  margin-left: 30px !important;
+}
+.footer img{
+  margin-left: 100px !important;
+}
+.link_lists ul{
+  list-style: none !important;
+}
+.footer_container img{
+  margin-left: 20px !important
+
+}
+.footer_container{
+    margin-top: 10px !important;
+    display: grid !important;
+    margin-left: 86px;
+
 }
 }
 
